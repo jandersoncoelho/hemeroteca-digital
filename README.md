@@ -1,4 +1,4 @@
-# Projeto Hemeroteca Digital
+﻿# Projeto Hemeroteca Digital
 
 ## Objetivo do projeto
 
