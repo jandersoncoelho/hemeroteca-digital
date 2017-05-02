@@ -10,7 +10,8 @@ class TestProcessaJornal(unittest.TestCase):
 						 'data_publicacao':'10/10/1959',
 						 'cidade':'Ituiutaba',
 						 'estado':'MG',
-						 'descricao_jornal':'',	
+						 'descricao_jornal':'',
+						 'imagens':[]	
 					   }
 		jornal = Jornal(dados_jornal)
 		assert isinstance(jornal, Jornal)
@@ -25,6 +26,7 @@ class TestProcessaJornal(unittest.TestCase):
 						 'cidade':'Ituiutaba',
 						 'estado':'MG',
 						 'descricao_jornal':'O jornal é teste!',	
+						 'imagens':[]
 					   }
 
 		jornal = Jornal(dados_jornal)
@@ -46,7 +48,9 @@ class TestProcessaJornal(unittest.TestCase):
 						 'data_publicacao':'31/02/1959',
 						 'cidade':'Ituiutaba',
 						 'estado':'MG',
-						 'descricao_jornal':''	
+						 'descricao_jornal':''	,
+						 'imagens':[]
+
 					   }
 				
 		with self.assertRaises(ValueError):
@@ -56,16 +60,26 @@ class TestProcessaJornal(unittest.TestCase):
 
 
 	def test_gera_arquivo_pdf_jornal(self):
+
+		lista_imagens = ['/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1642.JPG',
+						 '/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1643.JPG',
+						 '/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1644.JPG',
+						 '/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1645.JPG']
 		dados_jornal = { 
 		                 'titulo_jornal':'Folha de Ituiutaba',
 						 'data_publicacao':'10/10/1959',
 						 'cidade':'Ituiutaba',
 						 'estado':'MG',
-						 'descricao_jornal':'O jornal é teste!',	
+						 'descricao_jornal':'O jornal é teste!',
+						 'imagens':lista_imagens	
 					   }
-	
+		print (lista_imagens)
+
+		jornal = Jornal(dados_jornal)
+		jornal.gera_arquivo_jornal()
+
 if __name__ == '__main__':
-	unittest.main()
+ 	unittest.main()
 	
 
 	#hangout com Kent Back sobre TDD

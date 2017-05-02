@@ -13,6 +13,8 @@ class Jornal(Documento):
 		self._cidade	   			= dados_jornal['cidade']
 		self._estado				= dados_jornal['estado']
 		self._nome_arquivo 			= self._formata_nome_arquivo()
+		self._lista_imagens         = dados_jornal['imagens']
+		print (self._lista_imagens)
 
 	
 	def _formata_nome_arquivo(self):
@@ -88,9 +90,10 @@ class Jornal(Documento):
 		merger.addMetadata({u'/Title': self._titulo_jornal, 
 						    u'/Author':'', 
 						    u'/Subject':self._descricao_jornal, 
-						    u'/Keywords': '%s', '%s' % (self._cidade, self._estado)
-						    u'/Creator': 'Script de teste', 
-						    u'/Meu-Metadado': 'testando meu metadado'})
-		for pdf in pdfs:
-			merger.append(pdf)merger.write("result.pdf")
+						    u'/Keywords': self._cidade + ',' + self._estado,
+						    u'/Creator':self._titulo_jornal})
+
+		for imagem in self._lista_imagens:
+			merger.append(imagem)
+			merger.write(self._nome_arquivo)
 
