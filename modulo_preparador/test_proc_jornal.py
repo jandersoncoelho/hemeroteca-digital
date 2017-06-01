@@ -1,6 +1,8 @@
 #from unittest import TestCase
 import unittest
+import glob
 from jornal import Jornal
+
 
 class TestProcessaJornal(unittest.TestCase):
 	
@@ -58,29 +60,23 @@ class TestProcessaJornal(unittest.TestCase):
 			print('valor de data incorrero')
 			del(jornal)
 
-
-	def test_gera_arquivo_pdf_jornal(self):
-
-		lista_imagens = ['/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1642.JPG',
-						 '/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1643.JPG',
-						 '/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1644.JPG',
-						 '/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1645.JPG']
-		dados_jornal = { 
-		                 'titulo_jornal':'Folha de Ituiutaba',
-						 'data_publicacao':'10/10/1959',
-						 'cidade':'Ituiutaba',
-						 'estado':'MG',
-						 'descricao_jornal':'O jornal é teste!',
-						 'imagens':lista_imagens	
-					   }
-		print (lista_imagens)
-
+	def test_gera_arquivo_pdf_jornal_sem_ocr(self):
+		lista_imagens = glob.glob('/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1960_06_correio_do_pontal/*.JPG')
+		dados_jornal = {'titulo_jornal':'Correio do POntal',
+	 					'data_publicacao':'10/06/1960',
+	 					'cidade':'Ituiutaba',
+	 					'estado':'MG',
+	 					'descricao_jornal':'O jornal é teste!',
+	 					'imagens':lista_imagens	
+	 				   }
 		jornal = Jornal(dados_jornal)
 		jornal.gera_arquivo_jornal()
+
 
 if __name__ == '__main__':
  	unittest.main()
 	
+
 
 	#hangout com Kent Back sobre TDD
 	#https://www.youtube.com/watch?v=z9quxZsLcfo

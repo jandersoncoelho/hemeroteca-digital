@@ -1,7 +1,8 @@
 from documento import Documento
 from datetime import datetime
-from PyPDF2 import PdfFileMerger
+from PyPDF2 import PdfFileMerger, PdfFileReader, PdfFileWriter
 import time
+import img2pdf
 
 class Jornal(Documento):
 
@@ -14,9 +15,7 @@ class Jornal(Documento):
 		self._estado				= dados_jornal['estado']
 		self._nome_arquivo 			= self._formata_nome_arquivo()
 		self._lista_imagens         = dados_jornal['imagens']
-		print (self._lista_imagens)
-
-	
+			
 	def _formata_nome_arquivo(self):
 
 		try:
@@ -85,15 +84,23 @@ class Jornal(Documento):
 		else:
 			raise ValueError('A data de publicação do jornal está inválida!')
 
+	# def gera_arquivo_jornal(self):
+	# 	merger = PdfFileMerger()
+		# merger.addMetadata({u'/Title': self._titulo_jornal, 
+		# 				    u'/Author':'', 
+		# 				    u'/Subject':self._descricao_jornal, 
+		# 				    u'/Keywords': self._cidade + ',' + self._estado,
+		# 				    u'/Creator':self._titulo_jornal})
+
+	# 	for imagem in self._lista_imagens:
+	# 		merger.append(imagem)
+	# 		merger.write(self._nome_arquivo)
+
 	def gera_arquivo_jornal(self):
-		merger = PdfFileMerger()
-		merger.addMetadata({u'/Title': self._titulo_jornal, 
-						    u'/Author':'', 
-						    u'/Subject':self._descricao_jornal, 
-						    u'/Keywords': self._cidade + ',' + self._estado,
-						    u'/Creator':self._titulo_jornal})
 
-		for imagem in self._lista_imagens:
-			merger.append(imagem)
-			merger.write(self._nome_arquivo)
+		with open(self._nome_arquivo,"wb") as f:
+			self._lista_imagens.sort()
+			f.write(img2pdf.convert(self._lista_imagens))
+			f.close()
 
+		
