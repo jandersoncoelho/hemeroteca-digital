@@ -84,17 +84,6 @@ class Jornal(Documento):
 		else:
 			raise ValueError('A data de publicação do jornal está inválida!')
 
-	# def gera_arquivo_jornal(self):
-	# 	merger = PdfFileMerger()
-		# merger.addMetadata({u'/Title': self._titulo_jornal, 
-		# 				    u'/Author':'', 
-		# 				    u'/Subject':self._descricao_jornal, 
-		# 				    u'/Keywords': self._cidade + ',' + self._estado,
-		# 				    u'/Creator':self._titulo_jornal})
-
-	# 	for imagem in self._lista_imagens:
-	# 		merger.append(imagem)
-	# 		merger.write(self._nome_arquivo)
 
 	def gera_arquivo_jornal(self):
 

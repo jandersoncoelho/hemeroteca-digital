@@ -2,7 +2,7 @@
 import unittest
 import glob
 from jornal import Jornal
-
+import os
 
 class TestProcessaJornal(unittest.TestCase):
 	
@@ -62,7 +62,8 @@ class TestProcessaJornal(unittest.TestCase):
 
 	def test_gera_arquivo_pdf_jornal_sem_ocr(self):
 		lista_imagens = glob.glob('/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1960_06_correio_do_pontal/*.JPG')
-		dados_jornal = {'titulo_jornal':'Correio do POntal',
+		dados_jornal = {
+						'titulo_jornal':'Correio do Pontal',
 	 					'data_publicacao':'10/06/1960',
 	 					'cidade':'Ituiutaba',
 	 					'estado':'MG',
@@ -71,7 +72,10 @@ class TestProcessaJornal(unittest.TestCase):
 	 				   }
 		jornal = Jornal(dados_jornal)
 		jornal.gera_arquivo_jornal()
-
+		self.assertTrue(os.path.getsize(jornal.nome_arquivo) > 0.0)
+		
+		
+        
 
 if __name__ == '__main__':
  	unittest.main()
