@@ -1,7 +1,15 @@
+ .gitigonre
+ modulo_preparador/
+ modulo_preparador/pypdfocr/
  modulo_preparador/.cache/
  modulo_preparador/__pycache__/
  modulo_preparador/modulo_preparador.sublime-workspace
- 
+ modulo_preparador/*.txt
+ modulo_preparador/*.pdf
+ modulo_preparador/*.JPG
+ modulo_preparador/*.jpg
+ modulo_preparador/*.tiff
+ modulo_preparador/*.hocr
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
