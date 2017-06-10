@@ -1,0 +1,462 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"as",
+				"assertRaises"
+			],
+			[
+				"_",
+				"_nome_arquivo"
+			],
+			[
+				"ti",
+				"titulo_jornal"
+			],
+			[
+				"re",
+				"replace"
+			],
+			[
+				"da",
+				"data_reformadata"
+			],
+			[
+				"se",
+				"self"
+			],
+			[
+				"jor",
+				"jornal"
+			],
+			[
+				"if",
+				"if\tIf Condition"
+			],
+			[
+				"def",
+				"defs\tMethod"
+			],
+			[
+				"df",
+				"defs\tMethod"
+			],
+			[
+				"try",
+				"try\tTry/Except"
+			],
+			[
+				"data",
+				"data_publicacao"
+			],
+			[
+				"dat",
+				"data_publicacao"
+			],
+			[
+				"No",
+				"None"
+			],
+			[
+				"arqui",
+				"arquivo_imagem"
+			],
+			[
+				"arqui_",
+				"arquivo_imagem"
+			],
+			[
+				"ge",
+				"test_gera_pdf_imagem_unica_binaria"
+			],
+			[
+				"de",
+				"defs\tMethod"
+			],
+			[
+				"image",
+				"image_to_string"
+			],
+			[
+				"te",
+				"texto_ocr"
+			],
+			[
+				"ima",
+				"imagem_processada"
+			],
+			[
+				"or",
+				"orig"
+			],
+			[
+				"w",
+				"warped"
+			],
+			[
+				"imagem",
+				"imagem"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"encon",
+				"encontra_contornos"
+			],
+			[
+				"orin",
+				"original_shape"
+			],
+			[
+				"ma",
+				"make_border"
+			],
+			[
+				"imaga",
+				"imagem_emoldurada"
+			],
+			[
+				"im",
+				"imagem_emoldurada"
+			],
+			[
+				"em",
+				"imagem_emoldurada"
+			],
+			[
+				"imagem_eca",
+				"imagem_escala_cinza"
+			],
+			[
+				"bi",
+				"imagem_binarizada"
+			],
+			[
+				"i",
+				"imagem_contornos"
+			],
+			[
+				"o",
+				"imagem_original"
+			],
+			[
+				"contor",
+				"contornos"
+			],
+			[
+				"Ima",
+				"image_edged"
+			],
+			[
+				"fi",
+				"find_the_contours"
+			],
+			[
+				"ed",
+				"edged"
+			],
+			[
+				"to",
+				"tolist"
+			],
+			[
+				"fin",
+				"findContours"
+			],
+			[
+				"py",
+				"python-numpy"
+			],
+			[
+				"cra",
+				"Criando"
+			],
+			[
+				"an",
+				"ambiente"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 202.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/janderson/Downloads/rotaterightleft.c",
+		"/home/janderson/Área de Trabalho/vbaProject.bin",
+		"/home/janderson/pesquisa_pibit/hemeroteca-digital/modulo_preparador/imagem.py",
+		"/home/janderson/pesquisa_pibit/hemeroteca-digital/modulo_preparador/jornal.py",
+		"/home/janderson/pesquisa_pibit/hemeroteca-digital/modulo_preparador/test_proc_jornal.py",
+		"/home/janderson/pesquisa_pibit/hemeroteca-digital/modulo_preparador/test_proc_imagem.py",
+		"/home/janderson/pesquisa_pibit/hemeroteca-digital/.gitignore",
+		"/home/janderson/curso-python/independentes/page_magick/teste_fdpf.py",
+		"/home/janderson/pesquisa_pibit/wdl-viewer/Makefile",
+		"/home/janderson/pesquisa_pibit/wdl-viewer/README.rst",
+		"/home/janderson/programas/rarcrack-0.2/rarcrack.h",
+		"/home/janderson/programas/rarcrack-0.2/rarcrack.c",
+		"/home/janderson/pesquisa_pibit/testes/pdf_merger.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/test_proc_jornal.py",
+		"/home/janderson/pesquisa_pibit/hemeroteca-digital/README.md",
+		"/home/janderson/pesquisa_pibit/hemeroteca-digital/.git/hooks/prepare-commit-msg.sample",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/jornal.py",
+		"/home/janderson/Downloads/gscan2pdf-1.8.0/bin/gscan2pdf",
+		"/home/janderson/codigos-fontes/gscan2pdf-code/t/01_NetPBM.t",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/test_proc_imagem.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/imagem.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/documento.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/jornal.pdf",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/result.pdf",
+		"/home/janderson/curso-python/independentes/teste_guetzli/teste_guetzli.py",
+		"/home/janderson/pesquisa_pibit/install-opencv.sh",
+		"/home/janderson/curso-python/independentes/recoonhecimento-imagens/reconhecer-texto/converte-texto.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/out_cinza.txt",
+		"/home/janderson/.virtualenvs/cv/lib/python3.5/site-packages/pytesseract/pytesseract.py",
+		"/home/janderson/curso-python/independentes/recoonhecimento-imagens/reconhecer-texto/teste.py",
+		"/home/janderson/curso-python/independentes/speech-python/python_speech.py",
+		"/home/janderson/curso-python/independentes/speech-python/google_voice.py",
+		"/home/janderson/curso-python/independentes/recoonhecimento-imagens/reconhecer-texto/reconhece-texto_2.py",
+		"/home/janderson/curso-python/independentes/recoonhecimento-imagens/reconhecer-texto/reconhece-texto.py",
+		"/media/janderson/imagens/backup_pc_janderson/pesquisa_periodicos_tela_preparador/manage.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/perguntas e respostas.txt",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/teste_proc_imagem.py",
+		"/home/janderson/curso-python/independentes/tdd_curso/test_boliche.py",
+		"/home/janderson/curso-python/independentes/py_test/test_c",
+		"/home/janderson/curso-python/independentes/opencv_scanner/scan.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/bound_box.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/transform.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/binarize.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/transform_example.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/border.py",
+		"/home/janderson/.virtualenvs/cv/lib/python3.5/site-packages/imutils/convenience.py",
+		"/home/janderson/pesquisa_pibit/sistema/modulo_preparador/modulo_preparador",
+		"/home/janderson/curso-python/independentes/opencv_scanner/convert_pdf.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/teste_tesseract.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/transform.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/textdeskew",
+		"/home/janderson/curso-python/independentes/recoonhecimento-imagens/teste.py",
+		"/home/janderson/curso-python/independentes/opencv_scanner/teste_tesseract.cpp",
+		"/home/janderson/curso-python/independentes/opencv_rotate/rotate.py",
+		"/home/janderson/teste.cpp",
+		"/home/janderson/Música/gravacoes/trancricao.html",
+		"/home/janderson/curso-python/independentes/tornado_server/hello.py",
+		"/home/janderson/pesquisa_pibit/install-opencv_3_2.sh",
+		"/home/janderson/Downloads/eqrAsPEUX6NVuqfW",
+		"/home/janderson/Downloads/homer.sh",
+		"/home/janderson/programas/teste.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"90b",
+			"dpb",
+			"RB",
+			"author",
+			"orig",
+			"original_shape",
+			" =",
+			"tesseract_cmd",
+			"/home/janderson/pesquisa_pibit/jornais/1973_12_a_gazeta_do_pontal/DSC09766.JPG",
+			"im",
+			"resi",
+			"resi]",
+			"resi",
+			"orig",
+			"example",
+			"border",
+			"3.1.0",
+			"2",
+			"rotate",
+			"image",
+			"convert",
+			"tesseract"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1959_01__12_folha_de_ituiutaba/IMG_1642.JPG",
+			"_imagem",
+			"3.2.0"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 187.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "modulo_preparador.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 196.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
