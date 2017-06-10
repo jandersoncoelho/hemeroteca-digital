@@ -10,3 +10,4 @@
  modulo_preparador/*.jpg
  modulo_preparador/*.tiff
  modulo_preparador/*.hocr
+ modulo_preparador/.cache/
