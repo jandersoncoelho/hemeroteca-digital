@@ -106,5 +106,4 @@ class TestPreprocessaImagem(TestCase):
 
 
 		
-#https://guides.github.com/activities/hello-world/#pr
-#http://bibdig.biblioteca.unesp.br/handle/10/27061
+
