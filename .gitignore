@@ -12,5 +12,6 @@ modulo_preparador/*.tiff
 modulo_preparador/*.hocr
 modulo_preparador/.cache/
 modulo_preparador/ocr/
+modulo_preparador/cover/
 git_hub
 git_hub.pub
