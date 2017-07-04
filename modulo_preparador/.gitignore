@@ -1,4 +1,5 @@
  .gitigonre
+ *.pdf
  modulo_preparador/*.coverage
  modulo_preparador/
  modulo_preparador/pypdfocr/

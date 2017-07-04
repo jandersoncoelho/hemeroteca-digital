@@ -1,4 +1,6 @@
-.gitigonre
+.gitigore
+.vscode/
+*.pdf
 modulo_preparador/
 modulo_preparador/pypdfocr/
 modulo_preparador/.cache/
