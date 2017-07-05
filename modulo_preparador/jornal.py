@@ -1,15 +1,32 @@
-from documento import Documento
-from datetime import datetime
-from PyPDF2 import PdfFileMerger, PdfFileReader, PdfFileWriter
 import time
 import img2pdf
 import os
-
+from documento import Documento
+from datetime import datetime
+from PyPDF2 import PdfFileMerger, PdfFileReader, PdfFileWriter
 
 class Jornal(Documento):
+    """
+        Autor: Janderson de Almeida Coelho da Silva
+        Data de Modificação: 05/07/2017
 
+        Este módulo será responsável para a execução do processo de criação
+        de documentos digitalizados com reconhecimento óptico de caracteres
+        Aqui está a classe que fará toda a criação e processamento das imagens digitalizadas,
+        compilação em arquivos PDF e reconhecimento óptico de caracteres.     
+
+    """
     def __init__(self, dados_jornal=dict):
 
+        """ 
+		    Método construdor da classe. Instancia a imagem para ser preprocessada
+		    Exemplo de uso:
+
+		    >>> jornal = Jornal(dados_jornal)
+
+            O parâmetro da classe recebe um dicionário.
+		"""
+        
         self._data_publicacao = dados_jornal['data_publicacao']
         self._titulo_jornal = dados_jornal['titulo_jornal']
         self._descricao_jornal = dados_jornal['descricao_jornal']
@@ -20,6 +37,12 @@ class Jornal(Documento):
 
     def _formata_nome_arquivo(self):
 
+        """
+            Método que formata o nome do arquivo conforme a data de publicação fornecida pelo usuário
+            Exemplo de saída: 1960_01_01_titulo_jornal.pdf
+
+        """
+        
         try:
             # invertendo a data digitada pelo usuário para o formato 'ano_mes_dia'
             data_string = self._data_publicacao.replace('/', '_', 3)
@@ -37,7 +60,7 @@ class Jornal(Documento):
 
     def _data_publicacao_valida(self):
         try:
-            data_valida = time.strptime(self._data_publicacao, '%m/%d/%Y')
+            time.strptime(self._data_publicacao, '%m/%d/%Y')
             return True
         except ValueError:
             return False
@@ -78,14 +101,20 @@ class Jornal(Documento):
     # data de publicação do jornal
     @property
     def data_publicacao(self):
-        #self._data_publicacao = ('%s/%s/%s' % (self._dia, self._mes, self._ano))
+        '''
+            Retorna o valor da data publicação do jornal caso esta seja válida
+        '''
         if (self._data_publicacao_valida() == True):
             return self._data_publicacao
         else:
             raise ValueError('A data de publicação do jornal está inválida!')
 
     def gera_arquivo_jornal(self, caminho_arquivo=str):
-
+        '''
+            Método que cria o arquivo PDF a partir das imagens listadas no atributo
+            self._lista_imagens e salva dentro do caminho fornecido pelo parâmetro caminho_arquivo
+            caso não exista a pasta primeiramente será criada e logo depois o PDF será salvo dentro dela
+        '''
         os.makedirs(caminho_arquivo, exist_ok=True)
         os.chdir(caminho_arquivo)
         with open(self._nome_arquivo, "wb") as f:
@@ -94,11 +123,15 @@ class Jornal(Documento):
             f.close()
 
     def gera_ocr(self, caminho_arquivo=str):
-        try:
-            os.chdir(caminho_arquivo)
-            cpu_count = os.cpu_count() - 1
-            comando_ocr = "ocrmypdf -d -r -v --jobs %d --title '%s' -l por %s %s" % (
-                cpu_count, self._titulo_jornal, self.nome_arquivo, self.nome_arquivo)
-        except Exception as e:
-            raise e
+        '''
+            Principal método: Depois de criar o arquivo PDF um comando chamado ocrmypdf
+            com alguns parâmetros será chamado do sistema operacional para executar o Tesseract
+            Mais inforações sobre como funciona o ocrmypdf em:
+            http://ocrmypdf.readthedocs.io/en/latest/
+
+        '''
+        os.chdir(caminho_arquivo)
+        cpu_count = os.cpu_count() - 1
+        comando_ocr = "ocrmypdf -d -r -v --jobs %d --title '%s' -l por %s %s" % (
+        cpu_count, self._titulo_jornal, self.nome_arquivo, self.nome_arquivo)
         return os.system(comando_ocr)

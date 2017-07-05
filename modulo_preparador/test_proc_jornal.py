@@ -1,9 +1,7 @@
-#from unittest import TestCase
+import os
 import unittest
 import glob
 from jornal import Jornal
-import os
-
 
 class TestProcessaJornal(unittest.TestCase):
 
@@ -18,8 +16,7 @@ class TestProcessaJornal(unittest.TestCase):
         }
         jornal = Jornal(dados_jornal)
         assert isinstance(jornal, Jornal)
-        del(jornal)
-
+        
     def test_valida_dados_jornal(self):
 
         # testando se o usuário colocou a data certa
