@@ -73,7 +73,7 @@ class TestProcessaJornal(unittest.TestCase):
             'imagens': lista_imagens
         }
         jornal = Jornal(dados_jornal)
-        jornal.gera_arquivo_jornal()
+        jornal.gera_arquivo_jornal('/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1960_06_correio_do_pontal/pdf')
         self.assertTrue(os.path.getsize(jornal.nome_arquivo) > 0.0)
 
     def test_gera_ocr(self):
@@ -87,7 +87,7 @@ class TestProcessaJornal(unittest.TestCase):
             'imagens': lista_imagens
         }
         jornal = Jornal(dados_jornal)
-        self.assertEqual(jornal.gera_ocr(jornal.nome_arquivo), 0)
+        self.assertEqual(jornal.gera_ocr('/home/janderson/pesquisa_pibit/jornais/pendrive_cepdomp/1960_06_correio_do_pontal/pdf'), 0)
 if __name__ == '__main__':
     unittest.main()
 

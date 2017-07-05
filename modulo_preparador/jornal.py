@@ -84,17 +84,21 @@ class Jornal(Documento):
         else:
             raise ValueError('A data de publicação do jornal está inválida!')
 
-    def gera_arquivo_jornal(self):
+    def gera_arquivo_jornal(self, caminho_arquivo=str):
 
+        os.makedirs(caminho_arquivo, exist_ok=True)
+        os.chdir(caminho_arquivo)
         with open(self._nome_arquivo, "wb") as f:
             self._lista_imagens.sort()
             f.write(img2pdf.convert(self._lista_imagens))
             f.close()
 
-    def gera_ocr(self, nome_arquivo=str):
+    def gera_ocr(self, caminho_arquivo=str):
         try:
-            comando_ocr = "ocrmypdf -d -r -v --jobs 1 --title '%s' -l por %s %s" % (
-                self._titulo_jornal, self.nome_arquivo, self.nome_arquivo)
+            os.chdir(caminho_arquivo)
+            cpu_count = os.cpu_count() - 1
+            comando_ocr = "ocrmypdf -d -r -v --jobs %d --title '%s' -l por %s %s" % (
+                cpu_count, self._titulo_jornal, self.nome_arquivo, self.nome_arquivo)
         except Exception as e:
             raise e
         return os.system(comando_ocr)
